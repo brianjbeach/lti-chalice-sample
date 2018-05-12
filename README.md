@@ -1,17 +1,24 @@
+Start by installing Chalice 
+
+```
 $ pip install chalice
+```
 
+Then create a new project 
+
+```
 $ chalice new-project lti-chalice-sample && cd lti-chalice-sample
-
+```
 
 In a real world application we could simply add pylti to requirements.txt.
 However, in this case, the latest code that supports Chalice is not in the 
-repo yet. Therefore, I am installing it localy. 
+repo yet. Therefore, I am installing it locally. 
 
 ```
 $ pip install pylti -t ./vendor/
 ```
 
-Now, I am going to everwrite pylti with my latest changes. 
+Now, I am going to overwrite pylti with my latest changes. 
 
 ```
 $ cp -R ~/pylti/pylti/ ./vendor/ 
@@ -34,7 +41,7 @@ def index(lti=lti):
 ```
 
 The last thing you need to do is add your key and secret. Secrets are stored 
-as environment variables in Lambda. You can add an environement to 
+as environment variables in Lambda. You can add an environment to 
 .chalice/config.json. The key should be prefixed with CONSUMER_KEY_SECRET_. 
 For example. 
 
@@ -60,6 +67,6 @@ $ chalice deploy
 ```
 
 This will return the **Rest API URL** which you will need to enter into your 
-LMS. For example in lambda it looks like this.
+LMS. For example, it looks like this in Moodle.
 
-
+![Moodle](moodle-lti-configuration.png)
