@@ -90,4 +90,4 @@ $ chalice deploy
 This will return the **Rest API URL** which you will need to enter into your 
 LMS. For example, it looks like this in Moodle.
 
-![Moodle](moodle-lti-configuration.png)
+![Moodle](moodle-lti-configuration-lambda.png)
